@@ -13,7 +13,11 @@ namespace DataAccessLayer.Concrete.Repositories
     {
         Context c = new Context();
 
-        DbSet<T> _object;
+        DbSet<T> _object; //_object T değerine karşılık gelen sınıfı tutuyor. Hangi sınıf olacağını belirlemek için constructor metot tanımlamamız gerekli.
+        public GenericRepository() //bunu yapmayınca System.ArgumentNullException: Değer null olamaz. hatası geldi!
+        {
+            _object = c.Set<T>(); //_object e değer ataması yapıyoruz. Dedik ki _object in değeri Context e bağlı olarak gönderilen T değeri olsun.
+        }
 
         public void Delete(T p)
         {
