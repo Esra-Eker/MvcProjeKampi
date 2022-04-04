@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace MvcProjeKampi.Controllers
     public class CategoryController : Controller
     {
         // GET: Category
-        CategoryManager cm = new CategoryManager(); //BusinessLayer katmanındaki CategoryManager sınıfını çağırmam gerekliydi.
+        CategoryManager cm = new CategoryManager(new EfCategoryDal()); //BusinessLayer katmanındaki CategoryManager sınıfını çağırmam gerekliydi.
         
         public ActionResult Index()
         {
@@ -19,7 +20,7 @@ namespace MvcProjeKampi.Controllers
         }
         public ActionResult GetCategoryList()
         {
-            var categoryvalues = cm.GetAllBL(); //categoryvalues isimli değişkenimin içine category tablomda yer alan değerler gelecek.
+            var categoryvalues = cm.GetList(); //categoryvalues isimli değişkenimin içine category tablomda yer alan değerler gelecek.
             return View(categoryvalues);
         }
 
@@ -32,7 +33,7 @@ namespace MvcProjeKampi.Controllers
         [HttpPost]  //AddCategory metoduna HttpPost attribute u devreye girdiği zaman çalışacaksın dedim. yani sayfamda bir şey post edildiği zaman çalışacak. HttpGet i de yukarıda yazdım, sebebi: sayfa yüklenir yüklenmez veri kaydetme işlemi yapmamak. 
         public ActionResult AddCategory(Category p)
         {
-            cm.CategoryAddBL(p);
+            //cm.CategoryAddBL(p);
             return RedirectToAction("GetCategoryList"); //ekleme işlemini gerçekleştirdikten sonra beni GetCategoryList e yönlendir.
         }
 
