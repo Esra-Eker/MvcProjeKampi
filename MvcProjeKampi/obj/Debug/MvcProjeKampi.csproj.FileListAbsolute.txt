@@ -169,3 +169,5 @@ C:\Users\Esra\Desktop\MVC Proje Kampı\MvcProjeKampi\bin\EntityLayer.dll.config
 C:\Users\Esra\Desktop\MVC Proje Kampı\MvcProjeKampi\bin\EntityFramework.xml
 C:\Users\Esra\Desktop\MVC Proje Kampı\MvcProjeKampi\bin\EntityFramework.SqlServer.dll
 C:\Users\Esra\Desktop\MVC Proje Kampı\MvcProjeKampi\bin\EntityFramework.SqlServer.xml
+C:\Users\Esra\Desktop\MVC Proje Kampı\MvcProjeKampi\bin\FluentValidation.dll
+C:\Users\Esra\Desktop\MVC Proje Kampı\MvcProjeKampi\bin\FluentValidation.xml

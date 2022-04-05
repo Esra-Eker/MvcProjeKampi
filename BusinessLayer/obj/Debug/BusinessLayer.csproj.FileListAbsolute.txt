@@ -16,3 +16,5 @@ C:\Users\Esra\Desktop\MVC Proje Kampı\BusinessLayer\obj\Debug\BusinessLayer.csp
 C:\Users\Esra\Desktop\MVC Proje Kampı\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
 C:\Users\Esra\Desktop\MVC Proje Kampı\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\Esra\Desktop\MVC Proje Kampı\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\Esra\Desktop\MVC Proje Kampı\BusinessLayer\bin\Debug\FluentValidation.dll
+C:\Users\Esra\Desktop\MVC Proje Kampı\BusinessLayer\bin\Debug\FluentValidation.xml
