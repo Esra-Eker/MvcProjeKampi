@@ -13,6 +13,7 @@ namespace DataAccessLayer.Abstract
         //Type Name();
         List<T> List();
         void Insert(T p); //Ekleme işlemini gerçekleştirebilmek için T sınıfından gelen bir p parametresi tanımladım. Böylece T sınıfında yer alan tüm propertylere ulaşabilicem.
+        T Get(Expression<Func<T, bool>> filter);
         void Delete(T p);
         void Update(T p);
         List<T> List(Expression<Func<T, bool>> filter); //şartlı listeleme için kullanıcam.
