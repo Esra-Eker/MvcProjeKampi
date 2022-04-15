@@ -18,3 +18,4 @@ C:\Users\Esra\Desktop\MVC Proje Kampı\DataAccessLayer\obj\Debug\DataAccessLayer
 C:\Users\Esra\Desktop\MVC Proje Kampı\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writer_edit.resources
 C:\Users\Esra\Desktop\MVC Proje Kampı\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writertitle_add.resources
 C:\Users\Esra\Desktop\MVC Proje Kampı\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_imagesizechange.resources
+C:\Users\Esra\Desktop\MVC Proje Kampı\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writer_addstatus.resources

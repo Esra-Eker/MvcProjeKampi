@@ -45,5 +45,10 @@ namespace MvcProjeKampi.Controllers
             hm.HeadingAddBL(p);
             return RedirectToAction("Index");
         }
+
+        public ActionResult ContentByHeading() //contentleri headinge göre getir
+        {
+            return View();
+        }
     }
 }
