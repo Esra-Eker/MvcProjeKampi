@@ -31,7 +31,7 @@ namespace MvcProjeKampi.Controllers
             ValidationResult results = categoryvalidator.Validate(p);
             if(results.IsValid)
             {
-                cm.CategoryAddBL(p);
+                cm.CategoryAdd(p);
                 return RedirectToAction("Index");
             }
             else
