@@ -67,12 +67,10 @@ namespace MvcProjeKampi.Controllers
         public ActionResult DeleteHeading(int id)
         {
             var HeadingValue = hm.GetByID(id); //id ye göre buldurdum.
-            /*hm.HeadingDelete(HeadingValue);  //HeadingValue dan gelen değeri sildirdim.
-            return RedirectToAction("Index");*/
             if (HeadingValue.HeadingStatus == true)
             {
                 HeadingValue.HeadingStatus = false;
-                hm.HeadingDelete(HeadingValue);
+                hm.HeadingDelete(HeadingValue);  //HeadingValue dan gelen değeri sildirdim.
             }
             else
             {
