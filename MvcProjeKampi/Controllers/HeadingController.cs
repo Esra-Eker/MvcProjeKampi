@@ -58,5 +58,28 @@ namespace MvcProjeKampi.Controllers
             var HeadingValue = hm.GetByID(id); //önce güncellenecek olan değeri buraya getirmem gerekiyor.
             return View(HeadingValue);
         }
+        [HttpPost]
+        public ActionResult EditHeading(Heading p)
+        {
+            hm.HeadingUpdate(p);
+            return RedirectToAction("Index");
+        }
+        public ActionResult DeleteHeading(int id)
+        {
+            var HeadingValue = hm.GetByID(id); //id ye göre buldurdum.
+            /*hm.HeadingDelete(HeadingValue);  //HeadingValue dan gelen değeri sildirdim.
+            return RedirectToAction("Index");*/
+            if (HeadingValue.HeadingStatus == true)
+            {
+                HeadingValue.HeadingStatus = false;
+                hm.HeadingDelete(HeadingValue);
+            }
+            else
+            {
+                HeadingValue.HeadingStatus = true;
+                hm.HeadingDelete(HeadingValue);
+            }
+            return RedirectToAction("Index");
+        }
     }
 }
