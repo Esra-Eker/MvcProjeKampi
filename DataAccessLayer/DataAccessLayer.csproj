@@ -101,6 +101,10 @@
     <Compile Include="Migrations\202204221848133_mig_add_message.designer.cs">
       <DependentUpon>202204221848133_mig_add_message.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202204241537322_mig_contact_add_date.cs" />
+    <Compile Include="Migrations\202204241537322_mig_contact_add_date.designer.cs">
+      <DependentUpon>202204241537322_mig_contact_add_date.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -138,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202204221848133_mig_add_message.resx">
       <DependentUpon>202204221848133_mig_add_message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204241537322_mig_contact_add_date.resx">
+      <DependentUpon>202204241537322_mig_contact_add_date.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

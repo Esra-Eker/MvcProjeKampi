@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-    interface IMessageService
+    public interface IMessageService
     {
         List<Message> GetListInbox();
         List<Message> GetListSendbox();
