@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace MvcProjeKampi.Controllers
 {
@@ -24,13 +25,14 @@ namespace MvcProjeKampi.Controllers
             var adminuserinfo = c.Admins.FirstOrDefault(x => x.AdminUserName == p.AdminUserName && x.AdminPassword == p.AdminPassword);
             if(adminuserinfo != null)
             {
+                FormsAuthentication.SetAuthCookie(adminuserinfo.AdminUserName, false);
+                Session["AdminUserName"] = adminuserinfo.AdminUserName;
                 return RedirectToAction("Index", "AdminCategory");
             }
             else
             {
                 return RedirectToAction("Index");
             }
-            return View();
         }
     }
 }
