@@ -23,3 +23,4 @@ C:\Users\Esra\Desktop\MVC Proje Kampı\DataAccessLayer\obj\Debug\DataAccessLayer
 C:\Users\Esra\Desktop\MVC Proje Kampı\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_headingstatusadd.resources
 C:\Users\Esra\Desktop\MVC Proje Kampı\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_add_message.resources
 C:\Users\Esra\Desktop\MVC Proje Kampı\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_contact_add_date.resources
+C:\Users\Esra\Desktop\MVC Proje Kampı\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_add_ImageFile.resources

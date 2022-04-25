@@ -44,6 +44,7 @@ namespace MvcProjeKampi.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult NewMessage(Message p)
         {

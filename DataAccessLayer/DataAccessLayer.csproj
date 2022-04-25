@@ -105,6 +105,10 @@
     <Compile Include="Migrations\202204241537322_mig_contact_add_date.designer.cs">
       <DependentUpon>202204241537322_mig_contact_add_date.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202204251111041_mig_add_ImageFile.cs" />
+    <Compile Include="Migrations\202204251111041_mig_add_ImageFile.designer.cs">
+      <DependentUpon>202204251111041_mig_add_ImageFile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -145,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202204241537322_mig_contact_add_date.resx">
       <DependentUpon>202204241537322_mig_contact_add_date.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204251111041_mig_add_ImageFile.resx">
+      <DependentUpon>202204251111041_mig_add_ImageFile.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
