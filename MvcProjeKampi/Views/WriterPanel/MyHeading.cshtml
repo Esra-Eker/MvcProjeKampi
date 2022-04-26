@@ -1,9 +1,11 @@
 ﻿@using EntityLayer.Concrete
 @model List<Heading>
+
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewBag.Title = "MyHeading";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
 }
+
 @{ string color = "";}
 
 <!DOCTYPE html>
@@ -60,11 +62,11 @@
                     <tbody>
                         @foreach (var item in Model)
                         {
-                            if(item.Category.CategoryName=="Tiyatro")
+                            if (item.Category.CategoryName == "Tiyatro")
                             {
                                 color = "badge badge-warning";
                             }
-                            if(item.Category.CategoryName == "Spor")
+                            if (item.Category.CategoryName == "Spor")
                             {
                                 color = "badge badge-secondary";
                             }
@@ -167,3 +169,4 @@
 </body>
 </html>
 <a href="/Heading/AddHeading/" class="btn btn-primary">Yeni Başlık Girişi</a>
+
