@@ -117,24 +117,12 @@
                                         </i>
                                         Düzenle
                                     </a>
-                                    @{
-                                        if (item.HeadingStatus == true)
-                                        {
-                                            <a class="btn btn-danger btn-sm" href="/Heading/DeleteHeading/@item.HeadingID">
-                                                <i class="fas fa-trash">
-                                                </i>
-                                                Pasif Yap
-                                            </a>
-                                        }
-                                        else
-                                        {
-                                            <a class="btn btn-warning btn-sm" href="/Heading/DeleteHeading/@item.HeadingID">
-                                                <i class="fas fa-trash">
-                                                </i>
-                                                Aktif Yap
-                                            </a>
-                                        }
-                                    }
+
+                                    <a class="btn btn-danger btn-sm" href="/WriterPanel/DeleteHeading/@item.HeadingID">
+                                        <i class="fas fa-trash">
+                                        </i>
+                                        Sil
+                                    </a>
                                 </td>
                             </tr>
                         }
