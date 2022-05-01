@@ -17,7 +17,6 @@ namespace MvcProjeKampi.Controllers
         {
             var contentvalues = cm.GetListByWriter();
             return View(contentvalues);
-            return View();
         }
     }
 }
