@@ -38,17 +38,17 @@ namespace BusinessLayer.Concrete
             return _contentDal.List(x => x.HeadingID == id);
         }
 
-        public List<Content> GetListByWriter()
+        public List<Content> GetListByWriter(int id)
         {
-            return _contentDal.List(x => x.WriterID == 4);
+            return _contentDal.List(x => x.WriterID == id);
         }
 
-        public void HeadingDelete(Content content)
+        public void ContentDelete(Content content)
         {
             throw new NotImplementedException();
         }
 
-        public void HeadingUpdate(Content content)
+        public void ContentUpdate(Content content)
         {
             throw new NotImplementedException();
         }
