@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using System;
@@ -15,15 +16,17 @@ namespace MvcProjeKampi.Controllers
 
         HeadingManager hm = new HeadingManager(new EfHeadingDal());
         CategoryManager cm = new CategoryManager(new EfCategoryDal());
-
+        int writeridinfo;
         public ActionResult WriterProfile()
         {
             return View();
         }
-        public ActionResult MyHeading()
+        public ActionResult MyHeading(string p)
         {
-            //id = 1;
-            var values = hm.GetListByWriter();
+            Context c = new Context();
+            p = (string)Session["WriterMail"];
+            writeridinfo = c.Writers.Where(x => x.WriterMail == p).Select(y => y.WriterId).FirstOrDefault();
+            var values = hm.GetListByWriter(writeridinfo);
             return View(values);
         }
         [HttpGet]
@@ -42,7 +45,7 @@ namespace MvcProjeKampi.Controllers
         public ActionResult NewHeading(Heading p)
         {
             p.HeadingDate = DateTime.Parse(DateTime.Now.ToShortDateString());
-            p.WriterID = 4;
+            p.WriterID = writeridinfo;
             p.HeadingStatus = true;
             hm.HeadingAddBL(p);
             return RedirectToAction("MyHeading");
