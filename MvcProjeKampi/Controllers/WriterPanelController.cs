@@ -82,6 +82,11 @@ namespace MvcProjeKampi.Controllers
             hm.HeadingDelete(HeadingValue); //HeadingValue dan gelen değeri sildirdim.        
             return RedirectToAction("MyHeading");
         }
+        public ActionResult AllHeading()
+        {
+            var headings = hm.GetList();
+            return View(headings);
+        }
     }
 }
 /*<customErrors mode="On">
