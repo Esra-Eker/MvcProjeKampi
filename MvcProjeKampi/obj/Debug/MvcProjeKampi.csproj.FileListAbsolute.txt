@@ -171,3 +171,7 @@ C:\Users\Esra\Desktop\MVC Proje Kampı\MvcProjeKampi\bin\EntityFramework.SqlServ
 C:\Users\Esra\Desktop\MVC Proje Kampı\MvcProjeKampi\bin\EntityFramework.SqlServer.xml
 C:\Users\Esra\Desktop\MVC Proje Kampı\MvcProjeKampi\bin\FluentValidation.dll
 C:\Users\Esra\Desktop\MVC Proje Kampı\MvcProjeKampi\bin\FluentValidation.xml
+C:\Users\Esra\Desktop\MVC Proje Kampı\MvcProjeKampi\bin\PagedList.dll
+C:\Users\Esra\Desktop\MVC Proje Kampı\MvcProjeKampi\bin\PagedList.Mvc.dll
+C:\Users\Esra\Desktop\MVC Proje Kampı\MvcProjeKampi\bin\PagedList.xml
+C:\Users\Esra\Desktop\MVC Proje Kampı\MvcProjeKampi\bin\PagedList.Mvc.xml
