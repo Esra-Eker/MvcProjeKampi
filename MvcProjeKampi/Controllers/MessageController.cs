@@ -19,14 +19,14 @@ namespace MvcProjeKampi.Controllers
         MessageValidator messagevalidator = new MessageValidator();
         
         [Authorize]
-        public ActionResult Inbox()
+        public ActionResult Inbox(string p)
         {
-            var messagelist = mm.GetListInbox();
+            var messagelist = mm.GetListInbox(p);
             return View(messagelist);
         }
-        public ActionResult Sendbox()
+        public ActionResult Sendbox(string p)
         {
-            var messagelist = mm.GetListSendbox();
+            var messagelist = mm.GetListSendbox(p);
             return View(messagelist);
         }
         public ActionResult GetInBoxMessageDetails(int id)
@@ -52,7 +52,7 @@ namespace MvcProjeKampi.Controllers
             ValidationResult results = messagevalidator.Validate(p);
             if (results.IsValid) //Eğer sonuçlar geçerli ise
             {
-                //p.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
+                p.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
                 mm.MessageAdd(p);
                 return RedirectToAction("Sendbox"); //gönderilen meseja yönlendir.
             }

@@ -26,8 +26,7 @@ namespace MvcProjeKampi.Controllers
             return View();
         }
         public ActionResult MyHeading(string p)
-        {
-            
+        {           
             p = (string)Session["WriterMail"];
             var writeridinfo = c.Writers.Where(x => x.WriterMail == p).Select(y => y.WriterId).FirstOrDefault();
             //ViewBag.d = writeridinfo;
