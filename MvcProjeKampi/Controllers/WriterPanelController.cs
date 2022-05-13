@@ -9,6 +9,8 @@ using System.Web;
 using System.Web.Mvc;
 using PagedList;
 using PagedList.Mvc;
+using FluentValidation.Results;
+using BusinessLayer.ValidationRules;
 
 namespace MvcProjeKampi.Controllers
 {
@@ -17,20 +19,42 @@ namespace MvcProjeKampi.Controllers
         // GET: WriterPanel
 
         HeadingManager hm = new HeadingManager(new EfHeadingDal());
-        CategoryManager cm = new CategoryManager(new EfCategoryDal());  
+        CategoryManager cm = new CategoryManager(new EfCategoryDal());
+        WriterManager wm = new WriterManager(new EfWriterDal());
         Context c = new Context();
-        int id;
 
-        public ActionResult WriterProfile()
+        [HttpGet]
+        public ActionResult WriterProfile(int id=0)
         {
+            string p = (string)Session["WriterMail"];
+            id = c.Writers.Where(x => x.WriterMail == p).Select(y => y.WriterId).FirstOrDefault();
+            var writervalue = wm.GetByID(id);
+            return View(writervalue);
+        }
+        [HttpPost]
+        public ActionResult WriterProfile(Writer p)
+        {
+            WriterValidator writervalidator = new WriterValidator();
+            ValidationResult results = writervalidator.Validate(p);
+            if (results.IsValid) //Eğer sonuçlar geçerli ise
+            {
+                wm.WriterUpdate(p);
+                return RedirectToAction("AllHeading", "WriterPanel");
+            }
+            else
+            {
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
             return View();
         }
+
         public ActionResult MyHeading(string p)
         {           
             p = (string)Session["WriterMail"];
             var writeridinfo = c.Writers.Where(x => x.WriterMail == p).Select(y => y.WriterId).FirstOrDefault();
-            //ViewBag.d = writeridinfo;
-            id = writeridinfo;
             var values = hm.GetListByWriter(writeridinfo);
             return View(values);
         }

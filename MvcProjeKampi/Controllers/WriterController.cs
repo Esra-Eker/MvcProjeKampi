@@ -44,7 +44,6 @@ namespace MvcProjeKampi.Controllers
             }
             return View();
         }
-
         [HttpGet]
         public ActionResult EditWriter(int id)
         {
