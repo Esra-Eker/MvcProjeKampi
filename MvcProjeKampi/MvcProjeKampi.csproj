@@ -2636,6 +2636,8 @@
     <Content Include="Views\Content\GetAllContent.cshtml" />
     <Content Include="Views\Chart\Index.cshtml" />
     <Content Include="Views\Authorication\Index.cshtml" />
+    <Content Include="Views\Authorication\AddAdmin.cshtml" />
+    <Content Include="Views\Authorication\EditAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

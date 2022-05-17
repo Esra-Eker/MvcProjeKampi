@@ -22,12 +22,30 @@
             <th>@item.AdminID</th>
             <td>@item.AdminUserName</td>
             <td>@item.AdminRole</td>
-            <td>Aktif</td>
-            <td><a href="/AdminCategory/DeleteCategory/@item.AdminID" class="btn btn-danger">Pasif Yap</a></td>
-            <td><a href="/AdminCategory/EditCategory/@item.AdminID" class="btn btn-success">Yetkisini Değiştir</a></td>
-            <td><a href="#" class="btn btn-primary">Başlıklar</a></td>
+            <td>@item.AdminStatus</td>
+            <td>
+                @{
+                    if (item.AdminStatus == true)
+                    {
+                        <a class="btn btn-danger btn-sm" href="/Authorication/DeleteAdmin/@item.AdminID">
+                            <i class="fas fa-trash">
+                            </i>
+                            Pasif Yap
+                        </a>
+                    }
+                    else
+                    {
+                        <a class="btn btn-warning btn-sm" href="/Authorication/DeleteAdmin/@item.AdminID">
+                            <i class="fas fa-trash">
+                            </i>
+                            Aktif Yap
+                        </a>
+                    }
+                }
+            </td>
+            <td><a href="/Authorication/EditAdmin/@item.AdminID" class="btn btn-success">Yetkisini Değiştir</a></td>
         </tr>
     }
 </table>
-<a href="/AdminCategory/AddCategory" class="btn btn-info">Yeni Admin Tanımla</a>
+<a href="/Authorication/AddAdmin/" class="btn btn-info">Yeni Admin Tanımla</a>
 
